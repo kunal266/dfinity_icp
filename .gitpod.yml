@@ -1,0 +1,9 @@
+# Commands to start on workspace startup
+tasks:
+  - init: |
+      sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
+      printf "\nalias dfx="/home/gitpod/bin/dfx"" >> ~/.bashrc
+      source ~/.bashrc
+      
+    command: dfx --version
+             
